@@ -22,18 +22,21 @@ main {
   );
   border-radius: 2rem;
   z-index: 3;
+  backdrop-filter: blur(2rem);
 }
 .circle1,
 .circle2 {
   background: #fff;
   background: linear-gradient(
     to right bottom,
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 0.1)
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.3)
   );
   height: 20rem;
   width: 20rem;
   position: absolute;
+  z-index: 2;
+  border-radius: 50%;
 }
 .circle1 {
   top: 5%;
@@ -42,4 +45,9 @@ main {
 .circle2 {
   bottom: 5%;
   left: 7%;
+}
+.user img {
+  height: 13rem;
+  width: 13rem;
+  border-radius: 50%;
 }
