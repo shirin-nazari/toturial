@@ -43,6 +43,7 @@ main {
   z-index: 3;
   backdrop-filter: blur(2rem);
   display: flex;
+  flex-wrap: wrap;
 }
 .circle1,
 .circle2 {
@@ -117,7 +118,7 @@ main {
   font-weight: 600;
 }
 
-/* ---------------------------------- game ---------------------------------- */
+/* ---------------------------------- games ---------------------------------- */
 
 .status {
   margin-bottom: 3rem;
@@ -141,6 +142,7 @@ main {
 }
 .card {
   display: flex;
+
   justify-content: space-between;
   background: linear-gradient(
     to left top,
@@ -177,7 +179,6 @@ main {
 }
 .percentage {
   font-weight: bold;
-  background: linear-gradient(to right top, #f5c6aa, #c1ac95);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+
+  -webkit-text-fill-color: #c1ac95;
 }
