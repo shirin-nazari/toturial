@@ -1,6 +1,12 @@
 /* -------------------------- defind varible to css ------------------------- */
 :root {
+  /* -------------------------------------------------------------------------- */
+  /* moarfi kardan varible dar css injorie ke aval esm  class or elemnt bad kari ke mikhay 
+  va onvaght har cheghadr mikhy azsh estefade mikony ba ebart var(sedash mizani);
+  */
+
   --hr-unit: 50%;
+  --link-color: rgb(27, 27, 27);
 }
 
 hr {
@@ -25,15 +31,27 @@ nav img {
 }
 .link {
   text-decoration: none;
-  color: black;
+  color: var(--link-color);
   align-items: center;
   font-size: 35px;
   /* ------------------------------- transition ------------------------------- */
-  /* transition-property: color;
-  transition-duration: 1s;
-transition-delay: 1s;
-transition-timing-function: linear;
-/* short hands 
+  /*
+  in code bara ine ke kodom ro mikhay taqir bedi masalan color font-size .... or all 
+  transition-property: color;
+  /* -------------------------------------------------------------------------- */
+  /*  
+  in code bara timeshe ke cheghadr tool mikeshe anjam beshe
+  transition-duration: 1s;*/
+  /* -------------------------------------------------------------------------- */
+  /* 
+in code bara ine ke noghte start az ki bokhore masalan bad az 1s ejra beshe
+transition-delay: 1s; */
+  /* -------------------------------------------------------------------------- */
+  /* 
+in code bara ine ke had vasat ro set kone bara baghie property ha masalan sari bozorg nashe yekam kond tar
+transition-timing-function: linear; */
+  /* -------------------------------------------------------------------------- */
+  /* short hands 
 transition: property dutation timing-function delay; */
   /* -------------------------------------------------------------------------- */
   transition: all 1s ease-in-out;
@@ -50,26 +68,53 @@ transition: property dutation timing-function delay; */
   background-color: blue;
   border: solid 1px black;
   /* ----------------------------- about animation ---------------------------- */
-  /* animation-name: first-animation;
-  animation-duration: 1s;
-  animation-delay: 1s;
-  animation-iteration-count: 4;
-  animation-timing-function: ease-in;
-  animation-direction: alternate;
+  /*
+  in code entekhab esm bara animation has (tajoe dashte bash ke @key frames name animation gharar migire ) 
+  animation-name: first-animation;
+/* -------------------------------------------------------------------------- */
+  /* 
+  in code bara timeshe ke cheghadr tool mikeshe anjam beshe
+  animation-duration: 1s; */
+  /* -------------------------------------------------------------------------- */
+
+  /* 
+  in code bara ine ke noghte start az ki bokhore masalan bad az 1s ejra beshe
+  animation-delay: 1s; */
+  /* -------------------------------------------------------------------------- */
+  /* 
+  in code bara ine ke to betoni har chand bar ke bkhai ejrash koni (infinite repeat forever  anjam mide )
+  animation-iteration-count: 4; */
+  /* -------------------------------------------------------------------------- */
+
+  /*
+  in code bara ine ke had vasat ro set kone bara baghie property ha masalan sari bozorg nashe yekam kond tar
+  animation-timing-function: ease-in; */
+  /* -------------------------------------------------------------------------- */
+
+  /*
+  noee harkat ro moshakhas mikone masalan reverse faghat barmigarde  normal faghat kar khodesho anjam mide
+  alternate in dar raft va bargashte 
+  alternate-reverse in ham dar raft va bargashte
+  animation-direction: alternate; */
+  /* -------------------------------------------------------------------------- */
+  /* 
+  in code ine ke set mikone style ro bara ghabl ejra va bad ejra
   animation-fill-mode: both; */
   /* -------------------------------------------------------------------------- */
   /* ----------------------- about animation shortHands ----------------------- */
   /* animation:name duration timingfunction delay count direction  */
-  animation: first-animation 2s ease-out 0s 4 alternate;
+  /* animation: first-animation 2s ease-out 0s 4 alternate; */
   animation-fill-mode: both;
 }
 @keyframes first-animation {
+  /* ---------------------------- from noghte start --------------------------- */
   /* from {
     background-color: rgb(26, 94, 197);
     width: 100px;
     height: 100px;
   }
-  to {
+  /* ---------------------------- to noghte finish ---------------------------- */
+  /* to {
     background-color: rgb(117, 0, 0);
     width: 40px;
     height: 40px;
@@ -91,13 +136,26 @@ transition: property dutation timing-function delay; */
     border-radius: 50%;
     background: green;
     /* -------------------------------- tansform -------------------------------- */
-    /* transform: scale(2); */
-    /* transform: translate(50%, 30%); */
-    /* transform: rotate(180deg); */
-    /* transform: skew(0deg, 50deg);
-                    skewa X , skew Y
+    /* ------------------ bara harkat dadan proprty hay to css ------------------ */
+    /* 
+    2ta meghdar migire X , Y roy mehvar ona  pakhsh mikone 
+    transform: scale(2); */
+    /* -------------------------------------------------------------------------- */
+    /*
+    harkat roy mehvar X,Y  tekon mide
+    transform: translate(50%, 30%); */
     /* -------------------------------------------------------------------------- */
 
+    /* 
+    charkhesh mide proprty ro turn be rast charkhesh mide va deg be chap gardsh mide
+    transform: rotate(180deg); */
+    /* -------------------------------------------------------------------------- */
+    /* 
+    kesh miare 
+    transform: skew(0deg, 50deg);
+                    skewa X , skew Y
+    /* -------------------------------------------------------------------------- */
+    /* baray suport karadn dige morgara az property estfade mishe */
     /* ------------------------ suport chrome and tablet ------------------------ */
     /* -webkit-animation: forwards; */
     /* -------------------------------------------------------------------------- */
