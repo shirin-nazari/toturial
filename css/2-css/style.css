@@ -103,7 +103,7 @@ transition: property dutation timing-function delay; */
   /* -------------------------------------------------------------------------- */
   /* ----------------------- about animation shortHands ----------------------- */
   /* animation:name duration timingfunction delay count direction  */
-  /* animation: first-animation 2s ease-out 0s 4 alternate; */
+  animation: first-animation 2s ease-out 0s 4 alternate;
   animation-fill-mode: both;
 }
 @keyframes first-animation {
