@@ -29,18 +29,17 @@ let travelDestinations = [
   destination4,
 ];
 
-let destinationNamesWithin500Kms = travelDestinations.filter(
-  (travel) => travel.distanceKms <= 500
-  //   return  ? : "";
-); // Complete here
+let destinationNamesWithin500Kms = travelDestinations
+  .filter((travel) => travel.distanceKms <= 500)
+  .map((ele) => ele.destinationName); // Complete here
 
-let destinationNameReachableByFerry = travelDestinations.filter((element) =>
-  element.transportations.includes("ferry")
-); // Complete here
+let destinationNameReachableByFerry = travelDestinations
+  .filter((element) => element.transportations.includes("ferry"))
+  .map((ele) => ele.destinationName); // Complete here
 
-let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations.filter(
-  (el) => el.distanceKms > 300 && el.transportations.includes("train")
-); // Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
+let destinationNamesMoreThan300KmsAwayByTrain = travelDestinations
+  .filter((el) => el.distanceKms > 300 && el.transportations.includes("train"))
+  .map((ele) => ele.destinationName); /// Complete here (PRINT THE RESULT IN THE CONSOLE USING FOREACH)
 console.log(destinationNamesWithin500Kms);
-// console.log(destinationNameReachableByFerry);
-// console.log(destinationNamesMoreThan300KmsAwayByTrain);
+console.log(destinationNameReachableByFerry);
+console.log(destinationNamesMoreThan300KmsAwayByTrain);
