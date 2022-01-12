@@ -1,0 +1,31 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.parent {
+  height: 50vh;
+  width: 100vw;
+  padding-top: 10px;
+
+  background-color: maroon;
+  /* position: relative; */
+}
+.childone {
+  height: 10%;
+  width: 95%;
+  margin-top: 20px;
+  background-color: rgb(206, 182, 182);
+}
+.childtwo {
+  height: 10%;
+  width: 95%;
+  margin-top: 20px;
+  background-color: rgba(0, 95, 184, 0.452);
+}
+.childthree {
+  height: 10%;
+
+  width: 95%;
+  margin-top: 20px;
+  background-color: rgba(6, 184, 0, 0.452);
+}
