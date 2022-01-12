@@ -2,19 +2,53 @@
   padding: 0;
   margin: 0;
 }
+header {
+  background-color: rgb(172, 106, 0);
+  height: 15vh;
+  /* ------------------------------------position fixed-------------------------------------- */
+  /* baes fix shodan on element mishe vali mire posht element ghabli bara hal in moshkel bayad az z-index:1 estefade kard */
+  position: fixed;
+  /* vaghti az z-index index estefade mikonim bara ine ke biad roy baghie element ha */
+  z-index: 1;
+  /* vaghti az position: fixed estefade mikonim bayad behesh arz bedim */
+  max-width: 100%;
+  width: 100vw;
+  /* -------------------------------------------------------------------------- */
+}
+header ul {
+  list-style: none;
+  font-size: 40px;
+  /* ye property hast ke neshon mide chejory  fazay khali daron element por beshe */
+  white-space: nowrap;
+
+  text-align: center;
+  padding-top: 15px;
+}
+ul li {
+  display: inline-block;
+  padding-top: 7px;
+  width: 20%;
+  border: white 4px solid;
+  border-radius: 20px;
+  padding: 10px;
+}
 .parent {
   height: 50vh;
+  max-width: 100%;
   width: 100vw;
-  padding-top: 10px;
+  padding-top: 180px;
 
   background-color: maroon;
-  /* position: relative; */
+  position: relative;
 }
 .childone {
   height: 10%;
   width: 95%;
   margin-top: 20px;
   background-color: rgb(206, 182, 182);
+  position: absolute;
+  top: 106px;
+  left: 10px;
 }
 .childtwo {
   height: 10%;
@@ -28,4 +62,13 @@
   width: 95%;
   margin-top: 20px;
   background-color: rgba(6, 184, 0, 0.452);
+}
+p {
+  max-width: 100%;
+  width: 1200px;
+  font-size: 25px;
+  padding: 20px 130px;
+}
+img {
+  padding: 20px 130px;
 }
