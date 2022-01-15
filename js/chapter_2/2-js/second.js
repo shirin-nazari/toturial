@@ -98,3 +98,72 @@ let user = false;
 //   }
 //   //   console.log(index);  output: 0123
 // }
+
+/* ------------------------------- switch case ------------------------------ */
+
+let gerde = "SH";
+// switch (gerde) {
+//   case "S":
+//     console.log('grade === "S"');
+//   case "D":
+//     console.log('grade === "D"');
+//   case "SH":
+//     console.log('grade === "SH"');
+//   case "R":
+//     console.log('grade === "R"');
+//   case "T":
+//     console.log('grade === "T"');
+//   default:
+//     console.log("ha ha heh");
+// }
+// out put:grade === "SH"
+// grade === "R"
+//  grade === "T"
+//  ha ha heh
+
+// switch (gerde) {
+//   case "S":
+//     console.log('grade === "S"');
+//     break;
+//   case "D":
+//     console.log('grade === "D"');
+//     break;
+//   case "SH":
+//     console.log('grade === "SH"');
+//     break;
+//   case "R":
+//     console.log('grade === "R"');
+//     break;
+//   case "T":
+//     console.log('grade === "T"');
+//     break;
+//   default:
+//     console.log("ha ha heh");
+//     break;
+// }
+// out put:grade === "SH"
+
+/* ------------------------------- block scop ------------------------------- */
+
+// to mahdode khodeshe va be biron darz pida nemikone bara hami behsh migim block scope
+
+// let num = 12;
+// if (num) {
+//   let num = 20;
+//   console.log(num); // out put: 20
+// }
+// console.log(num); //output:12
+
+// const num = 12;
+// if (num) {
+//   const num = 20;
+//   console.log(num); // out put: 20
+// }
+// console.log(num); //output:12
+
+// var num = 12;
+// if (num) {
+//   var num = 20;
+//   console.log(num); // out put: 20
+// }
+// console.log(num); //output:20
