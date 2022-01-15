@@ -101,7 +101,7 @@ let number = null;
 
 /* --------------------------------- boolean -------------------------------- */
 
-console.log(true, false, "true", "false");
+// console.log(true, false, "true", "false");
 let concect = aps.includes("bahar");
 
 // console.log(concect);
@@ -126,8 +126,8 @@ let name = "shirin";
 /* -------------------------------------------------------------------------- */
 let score = "100";
 // console.log(score + 1); //outPut:1001
-console.log(typeof score); //outPut:string
+// console.log(typeof score); //outPut:string
 
 score = Number(score);
-console.log(score + 1); //outPut:101
-console.log(typeof score); //outPut:number
+// console.log(score + 1); //outPut:101
+// console.log(typeof score); //outPut:number
