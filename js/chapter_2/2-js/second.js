@@ -273,3 +273,24 @@ objectName.age = 20;
 // objectName.login();
 // objectName.logOut();
 // objectName.logIn();
+/* ------------ math that is object any thing and method and key ------------ */
+// console.log(Math); //kol method hay math
+const eara = 7.5;
+// console.log(Math.round(eara)); //output:8
+// console.log(Math.ceil(eara)); //output:8
+// console.log(Math.trunc(eara)); //output:7
+// console.log(Math.floor(eara)); //output:7
+// console.log(Math.floor(Math.random() * 10)); //out put: addad bin 0ta 10
+/* ----------------------------- primitive value ---------------------------- */
+let oneScor = 50;
+let twoScor = oneScor;
+// console.log(`oneScore: ${oneScor}  , twoScore: ${twoScor}`);
+oneScor = 100;
+// console.log(`oneScore: ${oneScor}  , twoScore: ${twoScor}`);
+
+const userOne = { name: "shirin", age: 20 };
+const userTwo = userOne;
+// console.log(userOne, userTwo);
+userTwo.age = 12;
+// change two object
+// console.log(userOne, userTwo);
