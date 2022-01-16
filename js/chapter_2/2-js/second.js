@@ -167,3 +167,109 @@ let gerde = "SH";
 //   console.log(num); // out put: 20
 // }
 // console.log(num); //output:20
+
+/* --------------------------- fuction declaration -------------------------- */
+
+// function nameFunction (parametr){
+//     block code
+// }
+// call function
+
+welcome();
+
+function welcome() {
+  console.log("Hello welcome ////////////:");
+}
+// you work
+/* --------------------------- function expression -------------------------- */
+
+// const or let nameFunction =function(){
+//     block code;
+// }
+// call function
+// hello();
+// vaghti bala tar seda mizani in error ro mide :::::error:::://: Cannot access 'hello' before initialization
+const hello = function () {
+  console.log("hello");
+};
+// hello();
+// you work
+
+// parametr and assignment
+
+// function firstName(name) {
+//   console.log(`good job ${name}`);
+// }
+// firstName("shirin");
+// default value in parametr
+function firstName(name = "shirin") {
+  console.log(`good job ${name}`);
+}
+// firstName("bahar");
+
+// return value in function
+// bara end function estfde midhe va ye value  ro moshakhas mikone baray call
+// function reduc(redus) {
+//   return redus * 6;
+// }
+// const arr = reduc(2);
+// console.log(arr);
+
+/* ----------------------------- arrow function ----------------------------- */
+
+// const arrow = () => "hello , world";
+
+/* --------------------------------- methods -------------------------------- */
+// forEach            index ro neshon mide
+// aps.forEach((person, index) => console.log(index + "-" + person));
+
+// const arrowName = (person, index) => {
+//   console.log(`${index} - hello jigar aps ${person}`);
+// };
+
+// aps.forEach(arrowName);
+
+/* ------------------------------ querySelector ----------------------------- */
+
+const ul = document.querySelector(".aps-admin");
+let html = "";
+aps.forEach((person) => {
+  html += `<li style="color:red; ">${person}</li> `;
+});
+ul.innerHTML = html;
+
+/* --------------------------------- object --------------------------------- */
+
+let objectName = {
+  //kry : value,
+  name: "shirin",
+  location: [
+    { title: "mashhad shar", likes: 30 },
+    { title: "newyourk", likes: 20 },
+  ],
+  email: "shirin@gmail.com",
+  age: 19,
+  login: function () {
+    console.log("hello im log in ");
+  },
+  //dar function dasrsi be baghiee chiz hay to object
+  /* ---------------------------------- this ---------------------------------- */
+  logOut: function () {
+    this.location.forEach((loc) =>
+      console.log(`${this.name}   ${loc.title}   ${loc.likes}`)
+    );
+  },
+  // dar object az arrow function estefade nmishe baray in ke vaghti az this estefade mikoni object window ro mibini
+  logIn: () => {
+    // console.log(this); out put:Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+  },
+};
+// viwe in value
+// console.log(objectName.name);
+// console.log(objectName["email"]);
+// update value
+objectName.age = 20;
+// console.log(objectName.age);
+// objectName.login();
+// objectName.logOut();
+// objectName.logIn();
