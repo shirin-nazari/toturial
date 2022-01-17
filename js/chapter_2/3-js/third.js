@@ -71,15 +71,68 @@
 // div.classList.remove("course");
 // div.classList.add("sucses");
 
-const parageraf = document.querySelectorAll("p");
-parageraf.forEach((para) => {
-  if (para.textContent.includes("course")) {
-    para.classList.add("course");
-  } else if (para.innerText.includes("sucses")) {
-    para.classList.add("sucses");
-  }
-  para.classList.toggle("test"); // on
-  para.classList.toggle("test"); // off
-});
+// const parageraf = document.querySelectorAll("p");
+// parageraf.forEach((para) => {
+//   if (para.textContent.includes("course")) {
+//     para.classList.add("course");
+//   } else if (para.innerText.includes("sucses")) {
+//     para.classList.add("sucses");
+//   }
+//   para.classList.toggle("test"); // on
+//   para.classList.toggle("test"); // off
+// });
 
 // fargh text content va inner text dar in hast ke inner text vaghti display none bashe vva to safhe dide nashe to console ham neshon nmideh ama textContent to console neshon mide
+
+/* --------------------------- get childern in js --------------------------- */
+const articleChildern = document.querySelector("article");
+// console.log(Array.from(articleChildern.children));
+// // tabdil be array
+// Array.from(articleChildern.children).forEach((child) =>
+//   child.classList.add("course")
+// );
+
+// get parent element
+const articleH2 = document.querySelector("h2");
+// console.log(articleH2.parentElement);
+// console.log(articleH2.parentElement.parentElement); //output:parent parent yani body
+// console.log(articleH2.nextElementSibling); //output:child badi ro neshon mide
+// console.log(articleH2.previousElementSibling); //out put: element ghabli ro neshon mide vali chon ghabl in element parent hst null mizane
+// console.log(articleH2.nextElementSibling.parentElement.children); //output:all elemnt hay child
+
+/* ---------------------------- add event lisnner --------------------------- */
+const ul = document.querySelector("ul");
+const button = document.querySelector("button");
+// addEventListener mige ke (be chi gosh konam , hala che konamsh)
+// button.addEventListener("click", () => {
+// console.log("ha ha clicked meeeeeeeee");
+// add element
+// ul.innerHTML += "<li>somtimes new</li>";
+// and roh digash bara sakhtan ye elements
+// const li = document.createElement("li");
+//   li.textContent = "hello add me";
+//   // ul.append(li); output:append be akhari ezafe mikone
+//   ul.prepend(li); //output: be avali ezafe mikone
+// });
+
+// const items = document.querySelectorAll("li");
+// items.forEach((item) => {
+//   item.addEventListener("click", (e) => {
+//     // console.log("clicked me");
+//     // console.log(e); out put:PointerEvent tamam method hay event
+//     console.log(e.target); //output:baray be dast avordan in ke kodom ro zade
+//     // e.target.style.display = "none"; output:az bin bordansh to safhe
+//     // e.target.style.textDecoration = "line-through";
+//     console.log("li ");
+//     // e.stopPropagation(); parent ro motevaghf mikone
+//     // bara hazf kardan element in dom bayad az method remove estefde kard
+//     e.target.remove();
+//   });
+// });
+ul.addEventListener("click", (e) => {
+  // console.log("ul");
+  console.log(e.target);
+  if (e.target.tagName === "LI") {
+    e.target.remove();
+  }
+});
