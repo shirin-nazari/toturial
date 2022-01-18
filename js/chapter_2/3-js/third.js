@@ -93,7 +93,7 @@ const articleChildern = document.querySelector("article");
 // );
 
 // get parent element
-const articleH2 = document.querySelector("h2");
+// const articleH2 = document.querySelector("h2");
 // console.log(articleH2.parentElement);
 // console.log(articleH2.parentElement.parentElement); //output:parent parent yani body
 // console.log(articleH2.nextElementSibling); //output:child badi ro neshon mide
@@ -101,8 +101,8 @@ const articleH2 = document.querySelector("h2");
 // console.log(articleH2.nextElementSibling.parentElement.children); //output:all elemnt hay child
 
 /* ---------------------------- add event lisnner --------------------------- */
-const ul = document.querySelector("ul");
-const button = document.querySelector("button");
+// const ul = document.querySelector("ul");
+// const button = document.querySelector("button");
 // addEventListener mige ke (be chi gosh konam , hala che konamsh)
 // button.addEventListener("click", () => {
 // console.log("ha ha clicked meeeeeeeee");
@@ -124,15 +124,33 @@ const button = document.querySelector("button");
 //     // e.target.style.display = "none"; output:az bin bordansh to safhe
 //     // e.target.style.textDecoration = "line-through";
 //     console.log("li ");
-//     // e.stopPropagation(); parent ro motevaghf mikone
+//     // e.stopPropagation(); parent ro motevaghf mikone yani az ravabt jologiri mikone
 //     // bara hazf kardan element in dom bayad az method remove estefde kard
 //     e.target.remove();
 //   });
 // });
-ul.addEventListener("click", (e) => {
-  // console.log("ul");
-  console.log(e.target);
-  if (e.target.tagName === "LI") {
-    e.target.remove();
-  }
+// ul.addEventListener("click", (e) => {
+//   // console.log("ul");
+//   console.log(e.target);
+//   if (e.target.tagName === "LI") {
+//     e.target.remove();
+//   }
+// });
+
+const copy = document.querySelector(".copy-me");
+copy.addEventListener("copy", () => {
+  console.log("OH OH dont copy fkr kardi nafahmidam heh");
+});
+const moveBox = document.querySelector(".box");
+
+moveBox.addEventListener("mousemove", (e) => {
+  console.log(e);
+  //left     //top
+  // console.log(e.offsetX, e.offsetY);
+  moveBox.textContent = `X pos- : ${e.offsetX} ** Y pos- : ${e.offsetY}`;
+});
+// scroll kardan mouse
+document.addEventListener("wheel", (e) => {
+  // console.log(e);
+  console.log(e.pageX, e.pageY);
 });
