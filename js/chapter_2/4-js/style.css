@@ -1,0 +1,19 @@
+body {
+  background: #eee;
+}
+form {
+  max-width: 200px;
+  margin: 40px auto;
+  padding: 10px;
+  background: white;
+}
+input {
+  display: block;
+  padding: 10px;
+  margin: 10px auto;
+}
+#submit {
+  background: rgb(219, 0, 55);
+  color: #fff;
+  border: white solid 1px;
+}
