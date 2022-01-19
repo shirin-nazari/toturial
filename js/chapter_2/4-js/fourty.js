@@ -33,12 +33,18 @@ form.addEventListener("submit", (e) => {
 
 // let result = username.search(pattern); //output:number
 // console.log(result);
+// form.username.addEventListener("keydown", (e) => {
+//   // console.log(e.target.value);
+//   if (usernamePattern.test(e.target.value)) {
+//     form.username.setAttribute("class", "sucess");
+//   } else {
+//     form.username.setAttribute("class", "error");
+//   }
+// });
 
-form.username.addEventListener("keydown", (e) => {
-  // console.log(e.target.value);
-  if (usernamePattern.test(e.target.value)) {
-    form.username.setAttribute("class", "sucess");
-  } else {
-    form.username.setAttribute("class", "error");
-  }
-});
+const names = ["Amimostafa", "shirin", "Alireza"];
+// function find(name) {
+//   return name.find((item) => item.length > 7);
+// }
+// let lenght = find(names);
+// console.log(lenght);
