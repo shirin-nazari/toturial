@@ -82,7 +82,7 @@
 //   para.classList.toggle("test"); // off
 // });
 
-// fargh text content va inner text dar in hast ke inner text vaghti display none bashe vva to safhe dide nashe to console ham neshon nmideh ama textContent to console neshon mide
+// //////////////////fargh text content va inner text dar in hast ke inner text vaghti display none bashe vva to safhe dide nashe to console ham neshon nmideh ama textContent to console neshon mide
 
 /* --------------------------- get childern in js --------------------------- */
 const articleChildern = document.querySelector("article");
