@@ -6,17 +6,6 @@ const quizeOne = document.querySelector(".quize1").checked;
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  let amountCorrect = 0;
-  for (let i = 1; i <= 45; i++) {
-    var radios = document.getElementsByName("quize1" + i);
-    for (let j = 0; j < radios.length; j++) {
-      var radio = radios[j];
-      if (radio.value == "correct" && radio.checked) {
-        amountCorrect++;
-      }
-    }
-  }
-
   console.log("Correct Responses: " + amountCorrect);
   // quizeOne.addEventListener("onclick", (e) => {
   //   for (let index = 0; i <= quizeOne.length; index++) {
@@ -32,8 +21,3 @@ form.addEventListener("submit", (e) => {
   //     console.log("heh");
   //   }
 });
-// });
-// function handleClick() {
-
-// }
-// handleClick;
