@@ -1,12 +1,11 @@
 const form = document.querySelector("form");
-const quizeOne = document.querySelector(".quize1").checked;
-// console.log(quizeOne);
-// const quizeTwo = document.querySelector(".quize2");
-// const score = document.querySelector("span");
+const quizeOne = document.querySelector(".quize1 input");
+const quizeTwo = document.querySelector(".quize2 input");
+const score = document.querySelector("span");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  console.log("Correct Responses: " + amountCorrect);
+  console.log(quizeOne.value);
   // quizeOne.addEventListener("onclick", (e) => {
   //   for (let index = 0; i <= quizeOne.length; index++) {
   //     if (quizeOne[i].checked) {
@@ -20,4 +19,5 @@ form.addEventListener("submit", (e) => {
   //   } else {
   //     console.log("heh");
   //   }
+  // });
 });
