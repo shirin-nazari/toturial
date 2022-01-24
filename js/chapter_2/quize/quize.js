@@ -1,23 +1,24 @@
 const form = document.querySelector("form");
-const quizeOne = document.querySelector(".quize1 input");
-const quizeTwo = document.querySelector(".quize2 input");
+
+const quizeOne = document.getElementsByName("datatype");
+
+const quizeTwo = document.getElementsByName("method");
 const score = document.querySelector("span");
+const sloveQuizeOne = quizeOne.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    console.log(e.target.value);
+  });
+});
+const sloveQuizeTwo = quizeTwo.forEach((index) => {
+  index.addEventListener("click", (e) => {
+    console.log(e.target.value);
+  });
+});
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-
-  console.log(quizeOne.value);
-  // quizeOne.addEventListener("onclick", (e) => {
-  //   for (let index = 0; i <= quizeOne.length; index++) {
-  //     if (quizeOne[i].checked) {
-  //       console.log(quizeOne[index].value);
-  //     }
-  //   }
-  // });
-  // quizeTwo.addEventListener("onclick", (e) => {
-  //   if (e.path[1]) {
-  //     console.log("errror");
-  //   } else {
-  //     console.log("heh");
-  //   }
-  // });
+  if (sloveQuizeOne === "int" || sloveQuizeTwo === "replace") {
+    score.innerHTML = "50%";
+  } else {
+    score.innerHTML = "100%";
+  }
 });
