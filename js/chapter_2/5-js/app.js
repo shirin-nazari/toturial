@@ -61,7 +61,7 @@ const productsMap = products.map(
 /* --------------------------------- reduce --------------------------------- */
 // ro element ghabli mosahebe mikone
 
-const score = [20, 10, 8, 35, 50, 100, 40, 60, 15, 14];
+// const score = [20, 10, 8, 35, 50, 100, 40, 60, 15, 14];
 // const reduceScore = score.reduce((acc, curr) => {
 //   if (curr > 30) {
 //     acc++;
@@ -83,4 +83,29 @@ const totalShirin = plays.reduce((acc, curr) => {
   return acc;
 }, 0);
 
-console.log(totalShirin);
+// console.log(totalShirin);
+/* -------------------------------------------------------------------------- */
+/* ---------------------------------- find ---------------------------------- */
+// return avalin chizi ke pyda mikone
+const score = [20, 10, 8, 35, 50, 100, 40, 60, 15, 14];
+const newScore = score.find((point) => point > 50);
+// console.log(newScore); output:100
+
+/* -------------------------------------------------------------------------- */
+/* ---------------------------- sort && resverse ---------------------------- */
+// sort miad moratab mikone va ye array tiqir yafte mide ama moshkel dare
+// method reverse miad baraks mikone array ro
+const scores = [10, 20, 30, 40, 5, 15, 50, 60, 70];
+// scores.sort();
+// console.log(scores); //output: [10, 15, 20, 30, 40, 5, 50, 60, 70]
+// scores.reverse();
+// console.log(scores); //output:[70, 60, 50, 5, 40, 30, 20, 15, 10];
+// bara dorst kardan moshkel sort bayad arrow function nevesht
+// scores.sort((a, b) => a - b);
+
+// console.log(scores); //output:[5, 10, 15, 20, 30, 40, 50, 60, 70];
+
+const productFilandMap = products
+  .filter((score) => score.price > 20)
+  .map((score) => `the name is ${score.name} and score: ${score.price}`);
+console.log(productFilandMap);
