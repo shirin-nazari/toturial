@@ -25,6 +25,7 @@ form.addEventListener("submit", (e) => {
   const timer = setInterval(() => {
     result.querySelector("span").textContent = `${outPut}%`;
     if (outPut === score) {
+      //for cansels kardan timer
       clearInterval(timer);
     } else {
       outPut++;
@@ -36,6 +37,11 @@ form.addEventListener("submit", (e) => {
 // setTimeout(()=>{
 // do somthing
 // }, daily)
+// ta tamom shodan zamansh oon code ro ejra mikone
+// setInterval(() => {
+//    do somthing
+// }, daily);
+// in har bar ejra mishe va bin har chand daghighe ke behsh bdi ejra mishe
 
 /* ------------------------------ window Object ----------------------------- */
 // console.log("hello");
