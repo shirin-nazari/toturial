@@ -19,8 +19,17 @@ form.addEventListener("submit", (e) => {
   //show in webPage
   // window.scrollTo(0,0)
   scrollTo(0, 0);
-  result.querySelector("span").textContent = `${score}%`;
   result.classList.remove("d-none");
+  // animation score
+  let outPut = 0;
+  const timer = setInterval(() => {
+    result.querySelector("span").textContent = `${outPut}%`;
+    if (outPut === score) {
+      clearInterval(timer);
+    } else {
+      outPut++;
+    }
+  }, 10);
 });
 
 /* ------------------------------- setTimeout ------------------------------- */
