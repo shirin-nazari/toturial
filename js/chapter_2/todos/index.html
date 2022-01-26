@@ -21,13 +21,45 @@
     <title>TODO LIST</title>
   </head>
   <body>
-    <section class="container-fluid vh-100 bg-dark">
-      <div class=""></div>
-      <ul class="list-group w-50 text-center">
-        <li class="list-group-item">1- Done coding</li>
-        <li class="list-group-item">2- Exersize</li>
-        <li class="list-group-item">3- Make lunch</li>
-      </ul>
+    <section class="container-fluid  min-vh-100  bg-dark">
+      <div class="intro py-3 bg-withe text-center">
+        <h1 class="text-light display-3 my-4">TO DO List</h1>
+      </div>
+      <div class="container w-50">
+        <form class="d-flex text-center">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-danger" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="intro py-3 bg-withe">
+        <ul class="container list-group w-50 my-4">
+          <li class="list-group-item active">
+            1- Done coding
+            <i class="fas fa-trash-alt float-end active"></i>
+          </li>
+          <li class="list-group-item">
+            2- Exersize
+            <i class="fas fa-trash-alt float-end active"></i>
+          </li>
+          <li class="list-group-item">
+            3- Make lunch
+            <i class="fas fa-trash-alt float-end"></i>
+          </li>
+        </ul>
+      </div>
+      <div class="container form-floating w-50 ">
+        <input type="text"
+          class="form-control my-auto"
+          placeholder="Add to do List"
+          id="floatingTextarea"
+        ></input>
+        <label for="floatingTextarea p-3">Add To Do</label>
+      </div>
     </section>
     <script src="app.js"></script>
   </body>
