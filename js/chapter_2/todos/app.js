@@ -36,16 +36,16 @@ const searchInput = document.querySelector("input");
 const buttonSearch = document.querySelector("button");
 console.log(buttonSearch);
 // const formSearch = document.querySelector("form");
-searchInput.addEventListener("input", (e) => {
+searchInput.addEventListener("change", (e) => {
   //   console.log(e.target.value);
   let value = e.target.value;
   const itemList = li.forEach((item) => {
-    const add = item.addEventListener("click", (e) => {
-      const valueLi = e.target.value;
-      console.log(valueLi);
-    });
-    return add;
+    return item.textContent;
   });
-  console.log(itemList);
+  if (value == itemList) {
+    console.log("hey");
+  } else {
+    console.log("dari eshtebah mizani");
+  }
   //   e.target.value===li.target.value
 });
