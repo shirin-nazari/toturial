@@ -17,7 +17,7 @@ icons.forEach((i) =>
 /* ------------------------ add karadan data ba input ----------------------- */
 const inputTextAdd = document.querySelector("input[type=text]");
 const buttonAdd = document.querySelector("#button-addon1");
-inputTextAdd.addEventListener("input", (e) => {
+inputTextAdd.addEventListener("change", (e) => {
   console.log(e.target.value);
   const newLi = document.createElement("li");
   const newIcons = document.createElement("i");
@@ -35,15 +35,17 @@ inputTextAdd.addEventListener("input", (e) => {
 const searchInput = document.querySelector("input");
 const buttonSearch = document.querySelector("button");
 console.log(buttonSearch);
-const formSearch = document.querySelector("form");
+// const formSearch = document.querySelector("form");
 searchInput.addEventListener("input", (e) => {
-  console.log(e.target.value);
-  li.forEach((item) => {
-    item.addEventListener("click", (e) => {
-      e.target.value === item.value
-        ? (item.style.display = "block")
-        : (item.style.display = "none");
+  //   console.log(e.target.value);
+  let value = e.target.value;
+  const itemList = li.forEach((item) => {
+    const add = item.addEventListener("click", (e) => {
+      const valueLi = e.target.value;
+      console.log(valueLi);
     });
+    return add;
   });
+  console.log(itemList);
   //   e.target.value===li.target.value
 });
