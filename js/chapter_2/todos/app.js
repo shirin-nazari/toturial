@@ -45,7 +45,7 @@ searchInput.addEventListener("change", (e) => {
   if (value == itemList) {
     console.log("hey");
   } else {
-    console.log("dari eshtebah mizani");
+    console.log(" dari eshtebah mizani");
   }
   //   e.target.value===li.target.value
 });
