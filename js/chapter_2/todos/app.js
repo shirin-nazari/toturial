@@ -61,10 +61,19 @@ formAdd.addEventListener("submit", (e) => {
 const searchInput = document.querySelector(".search input");
 
 const filterTodos = (term) => {
-  Array.from(ulList.children).filter(() => {});
+  Array.from(ulList.children)
+    .filter((todo) => !todo.textContent.toLowerCase().includes(term))
+    .forEach((todo) => {
+      todo.classList.add("filtered");
+    });
+  Array.from(ulList.children)
+    .filter((todo) => todo.textContent.toLowerCase().includes(term))
+    .forEach((todo) => {
+      todo.classList.remove("filtered");
+    });
 };
 searchInput.addEventListener("keyup", () => {
-  const term = searchInput.value.trim();
+  const term = searchInput.value.trim().toLowerCase();
   filterTodos(term);
   // const itemList = li.forEach((item) => {
   //   return item.textContent;

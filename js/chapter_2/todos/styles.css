@@ -1,0 +1,6 @@
+.filtered {
+  display: none !important;
+}
+.list-group li {
+  background-color: rgb(224, 224, 224);
+}
