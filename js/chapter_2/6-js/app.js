@@ -27,20 +27,20 @@ const now = new Date();
 // const hours = Math.round(minu / 60);
 // const day = Math.round(hours / 24);
 // console.log(minu, hours, day);
-// const clock = document.querySelector(".clock");
-// const tick = () => {
-//   const now = new Date();
-//   const h = now.getHours();
-//   const m = now.getMinutes();
-//   const s = now.getSeconds();
-//   const html = `
-//          <span>${h}</span> :
-//          <span>${m}</span> :
-//         <span>${s}</span>
-//   `;
-//   clock.innerHTML = html;
-// };
-// setInterval(tick, 1000);
+const clock = document.querySelector(".clock");
+const tick = () => {
+  const now = new Date();
+  const h = now.getHours();
+  const m = now.getMinutes();
+  const s = now.getSeconds();
+  const html = `
+         <span>${h}</span> :
+         <span>${m}</span> :
+        <span>${s}</span>
+  `;
+  clock.innerHTML = html;
+};
+setInterval(tick, 1000);
 // console.log(dateFns.isToday(now)); //output:ture
 console.log(dateFns.format(now, "YYYY")); //output:2022
 console.log(dateFns.format(now, "MMMM")); //output:January
