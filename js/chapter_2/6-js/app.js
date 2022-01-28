@@ -1,4 +1,4 @@
-const before = new Date("Tur Jan 27 2022 13:00:08");
+// const before = new Date("Tur Jan 27 2022 13:00:08");
 const now = new Date();
 // console.log(now);
 // console.log(typeof now); // output:object
@@ -46,3 +46,7 @@ console.log(dateFns.format(now, "YYYY")); //output:2022
 console.log(dateFns.format(now, "MMMM")); //output:January
 console.log(dateFns.format(now, "MMM")); //output:Jan
 console.log(dateFns.format(now, "dddd")); //output:Friday day ro neshon mide
+console.log(dateFns.format(now, "Do")); //output:28th roz az mah ro mige
+console.log(dateFns.format(now, "dddd,Do , MMMM,YYYY"));
+const before = new Date("November 10 2021 13:00:00");
+console.log(dateFns.distanceInWords(now, before));
