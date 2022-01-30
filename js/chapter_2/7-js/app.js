@@ -1,4 +1,4 @@
-const getTodo = (callback) => {
+const getTodo = (resource, callback) => {
   const request = new XMLHttpRequest();
   request.addEventListener("readystatechange", () => {
     //   console.log(request, request.readyState)
@@ -11,16 +11,16 @@ const getTodo = (callback) => {
     }
   });
   // request.open("GET", "https://jsonplaceholder.typicode.com/todos/");
-  request.open("GET", "todos.json");
+  request.open("GET", resource);
   request.send();
 };
 
-getTodo((err, data) => {
-  console.log("callback fired");
-  console.log(err, data);
-  if (err) {
-    console.log(err);
-  } else {
+getTodo("todo/todos.json", (err, data) => {
+  console.log(data);
+  getTodo("todo/shirin.json", (err, data) => {
     console.log(data);
-  }
+    getTodo("todo/bahar.json", (err, data) => {
+      console.log(data);
+    });
+  });
 });
