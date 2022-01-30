@@ -1,0 +1,21 @@
+[
+  {
+    "text": "Im player game",
+    "auther": "shirin",
+    "point": 50,
+    "working": true
+  },
+  { "text": "Im player ", "auther": "bahar", "point": 100, "working": true },
+  {
+    "text": "Im making post ",
+    "auther": "maryam",
+    "point": 200,
+    "working": false
+  },
+  {
+    "text": "Im put on to page",
+    "auther": "pourya",
+    "point": 10,
+    "working": false
+  }
+]
