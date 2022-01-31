@@ -88,38 +88,73 @@
 //     console.log(err);
 //   });
 // function bala ba estefade az promise
-const getTodo = (resource) => {
-  return new Promise((resolve, reject) => {
-    const request = new XMLHttpRequest();
-    request.addEventListener("readystatechange", () => {
-      //   console.log(request, request.readyState)
-      if (request.readyState === 4 && request.status === 200) {
-        // console.log(request.responseText); //get jison
-        const data = JSON.parse(request.responseText);
-        resolve(data);
-      } else if (request.readyState === 4) {
-        reject("colud not fetch");
-      }
-    });
-    // request.open("GET", "https://jsonplaceholder.typicode.com/todos/");
-    request.open("GET", resource);
-    request.send();
-  });
-};
-getTodo("todo/shirin.json")
-  .then((data) => {
-    console.log(data, " i get shirin");
-    return getTodo("todo/bahar.json");
-  })
-  .then((data) => {
-    console.log(data, "i get bahar");
-    return getTodo("todo/todos.json");
-  })
-  .then((data) => {
-    console.log(data, "i get todos");
-  })
-  .catch((err) => {
-    console.error(err);
-  });
+// const getTodo = (resource) => {
+//   return new Promise((resolve, reject) => {
+//     const request = new XMLHttpRequest();
+//     request.addEventListener("readystatechange", () => {
+//       //   console.log(request, request.readyState)
+//       if (request.readyState === 4 && request.status === 200) {
+//         // console.log(request.responseText); //get jison
+//         const data = JSON.parse(request.responseText);
+//         resolve(data);
+//       } else if (request.readyState === 4) {
+//         reject("colud not fetch");
+//       }
+//     });
+//     // request.open("GET", "https://jsonplaceholder.typicode.com/todos/");
+//     request.open("GET", resource);
+//     request.send();
+//   });
+// };
+// getTodo("todo/shirin.json")
+//   .then((data) => {
+//     console.log(data, " i get shirin");
+//     return getTodo("todo/bahar.json");
+//   })
+//   .then((data) => {
+//     console.log(data, "i get bahar");
+//     return getTodo("todo/todos.json");
+//   })
+//   .then((data) => {
+//     console.log(data, "i get todos");
+//   })
+//   .catch((err) => {
+//     console.error(err);
+//   });
 
 /* -------------------------------- fetch API ------------------------------- */
+// ye rabet bin js ba http hast
+
+// fetch("todo/shirin.json")
+//   .then((response) => {
+//     console.log("resolved ", response);
+//     return response.json();
+//   })
+//   .then((data) => {
+//     console.log(data, "Im get data");
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
+
+/* ------------------------------- async await ------------------------------ */
+const todos = async () => {
+  const response = await fetch("todo/todosdd.json");
+  if (response.status !== 200) {
+    //throw tavasot karbar tatif mishe va inke ejra function ghabli motevaghf mishe
+    throw new Error("can not fetch data");
+  }
+  const data = await response.json();
+  // console.log(response);
+  return data;
+};
+console.log(1);
+console.log(2);
+todos()
+  .then((data) => console.log("resolved :", data))
+  .catch((err) => console.log("rejected:", err.message));
+console.log(3);
+console.log(4);
+
+// const test = todos();
+// console.log(test); //output: chon async hast Promise {<fulfilled>: undefined} khoroji ye promise mide
