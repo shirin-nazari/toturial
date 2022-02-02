@@ -3,6 +3,7 @@ const card = document.querySelector(".card");
 const details = document.querySelector(".details");
 const time = document.querySelector("img.time");
 const icon = document.querySelector(".icon img");
+const forecast = new Forecast();
 // ui
 const updateUi = (data) => {
   //   const cityDets = data.cityDets;
@@ -49,12 +50,12 @@ const updateUi = (data) => {
     card.classList.remove("d-none");
   }
 };
-const updateCity = async (city) => {
-  //   console.log(city);
-  const cityDets = await getCity(city);
-  const weather = await getWeather(cityDets.Key);
-  return { cityDets, weather };
-};
+// const updateCity = async (city) => {
+//   //   console.log(city);
+//       const cityDets = await this.getCity(city);
+//       const weather = await this.getWeather(cityDets.Key);
+//       return { cityDets, weather };
+// };
 cityForm.addEventListener("submit", (e) => {
   // preventDefault
   e.preventDefault();
@@ -63,7 +64,8 @@ cityForm.addEventListener("submit", (e) => {
   const city = cityForm.city.value.trim();
   cityForm.reset();
   // update city
-  updateCity(city)
+  forecast
+    .updateCity(city)
     .then((data) => {
       updateUi(data);
       // console.log(data);
@@ -75,7 +77,8 @@ cityForm.addEventListener("submit", (e) => {
 });
 if (localStorage.getItem("city")) {
   //hata age refresh kone akharin search ro behsh neshon mide ama agr az to aplication pak kone ne dige
-  updateCity(localStorage.getItem("city"))
+  forecast
+    .updateCity(localStorage.getItem("city"))
     .then((data) => updateUi(data))
     .catch((err) => console.log(err));
 }
