@@ -69,4 +69,13 @@ cityForm.addEventListener("submit", (e) => {
       // console.log(data);
     })
     .catch((err) => console.log(err));
+
+  /* ---------------------------- set localStorage ---------------------------- */
+  localStorage.setItem("city", city);
 });
+if (localStorage.getItem("city")) {
+  //hata age refresh kone akharin search ro behsh neshon mide ama agr az to aplication pak kone ne dige
+  updateCity(localStorage.getItem("city"))
+    .then((data) => updateUi(data))
+    .catch((err) => console.log(err));
+}
